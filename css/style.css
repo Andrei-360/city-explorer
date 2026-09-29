@@ -1,1 +1,177 @@
 
+/* Modelul cutiei border-box și reset simplu */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f7f9fa;
+}
+
+/* 1. Antetul: aliniat cu Flexbox */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #1f3b5d;
+    color: #ffffff;
+}
+
+.site-header h1 {
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #90caf9;
+    text-decoration: underline;
+}
+
+/* Structura paginii */
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e1e7ec;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+section h2 {
+    margin-bottom: 16px;
+    color: #1f3b5d;
+    border-bottom: 2px solid #eef2f6;
+    padding-bottom: 8px;
+}
+
+/* 3. Destinațiile: CSS Grid responsive cu auto-fit și minmax */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    margin-bottom: 4px;
+    color: #1f3b5d;
+}
+
+.card .country {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #6c757d;
+    margin-bottom: 12px;
+}
+
+.card .duration {
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+/* 4. Evidențiere card featured */
+.card.featured {
+    border: 2px solid #5b3fd9;
+    background-color: #f6f3ff;
+}
+
+/* 2. Formular: etichete deasupra, câmpuri pe toată lățimea */
+.plan-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-form label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.plan-form input,
+.plan-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Starea :focus conform cerințelor */
+.plan-form input:focus,
+.plan-form select:focus {
+    outline: 2px solid #5b3fd9;
+    border-color: #5b3fd9;
+}
+
+.plan-form button {
+    padding: 12px;
+    background-color: #5b3fd9;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.plan-form button:hover {
+    background-color: #482ec4;
+}
+
+/* Recomandări */
+.recommendations-list {
+    margin-left: 20px;
+}
+
+.recommendations-list li {
+    margin-bottom: 10px;
+}
+
+/* 5. Subsolul */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f3b5d;
+    color: #ffffff;
+    margin-top: 40px;
+}
